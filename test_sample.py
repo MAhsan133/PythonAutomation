@@ -17,6 +17,7 @@ class TestRest(unittest.TestCase):
         if self.env_user_name == '1234' and self.env_pass_word == '1234':
             self.VALID_USER = True
 
+    # GET method, Verify there should be 12 records and response 200
     def test_get_request(self):
         if not self.VALID_USER:
             assert False
@@ -27,6 +28,7 @@ class TestRest(unittest.TestCase):
             assert resp.status_code == 200
             assert total_records == 12
 
+    # POST method, Verify a record is created with status code 201
     def test_post_request(self):
         if not self.VALID_USER:
             assert False
@@ -36,6 +38,7 @@ class TestRest(unittest.TestCase):
             resp = requests.post(url=post_url, data=post_data)
             assert resp.status_code == 201
 
+    # PUT method, Record updated with response code 200
     def test_put_request(self):
         if not self.VALID_USER:
             assert False
@@ -45,6 +48,7 @@ class TestRest(unittest.TestCase):
             resp = requests.put(url=user_url, data=put_data)
             assert resp.status_code == 200
 
+    # DELETE method, Verify record deleted with status code 204
     def test_delete_request(self):
         if not self.VALID_USER:
             assert False
