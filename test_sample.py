@@ -12,10 +12,13 @@ class TestRest(unittest.TestCase):
     # here we can verify user from DB
 
     def setUp(self):
-        self.env_user_name = os.environ['USER_NAME']
-        self.env_pass_word = os.environ['PASS_WORD']
-        if self.env_user_name == '1234' and self.env_pass_word == '1234':
-            self.VALID_USER = True
+        try:
+            env_user_name = os.environ['USER_NAME']
+            env_pass_word = os.environ['PASS_WORD']
+            if env_user_name == '1234' and env_pass_word == '1234':
+                self.VALID_USER = True
+        except:
+            pass
 
     # GET method, Verify there should be 12 records and response 200
     def test_get_request(self):
