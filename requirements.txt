@@ -1,2 +1,2 @@
 requests==2.22.0
-pyest==7.0.1
+pytest==7.0.1
