@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      USER_NAME: 1234
+      USER_NAME: 123
       PASS_WORD: 1234
 
 
@@ -38,12 +38,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --html=report.html
-    - name: 'Upload artifact report file'
-      uses: actions/upload-artifact@v2
-      with:
-        name: 'Artifact-A'
-        path: /home/runner/work/RestSampleCode/RestSampleCode/report.html
     - name: 'Upload artifact report style'
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: 'Artifact-A'
