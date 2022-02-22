@@ -34,7 +34,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --html=report.html
-    - name: Upload artifact
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
