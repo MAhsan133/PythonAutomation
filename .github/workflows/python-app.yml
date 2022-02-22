@@ -46,5 +46,5 @@ jobs:
     - name: 'Upload artifact report style'
     - uses: actions/upload-artifact@v2
       with:
-        name: my-artifact-style
+        name: 'Artifact-B'
         path: /home/runner/work/RestSampleCode/RestSampleCode/assets
