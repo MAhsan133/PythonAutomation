@@ -47,4 +47,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: 'Artifact-A'
-        path: /home/runner/work/RestSampleCode/RestSampleCode/assets/
+        path: /home/runner/work/RestSampleCode/RestSampleCode/
