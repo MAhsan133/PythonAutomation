@@ -38,8 +38,13 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --html=report.html
-    - name: 'Upload artifact #1'
+    - name: 'Upload artifact report file'
       uses: actions/upload-artifact@v2
       with:
         name: 'Artifact-A'
         path: /home/runner/work/RestSampleCode/RestSampleCode/report.html
+    - name: 'Upload artifact report style'
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact-style
+        path: /home/runner/work/RestSampleCode/RestSampleCode/assets
