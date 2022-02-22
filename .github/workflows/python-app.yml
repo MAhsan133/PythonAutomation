@@ -35,7 +35,7 @@ jobs:
       run: |
         pytest --html=report.html
     - name: Upload artifact
-      uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2
       with:
-        name: surefire-reports
-        path: mymeeave/target/surefire-reports/**
+        name: my-artifact
+        path: /RestSampleCode/RestSampleCode/report.html
