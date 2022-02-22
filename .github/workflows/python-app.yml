@@ -38,9 +38,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --html=report.html
-    - name: 'Upload artifact report style'
+    - name: 'Upload artifact report'
       if: always()
       uses: actions/upload-artifact@v2
       with:
         name: 'Artifact-A'
-        path: /home/runner/work/RestSampleCode/RestSampleCode/
+        path: |
+          /home/runner/work/RestSampleCode/RestSampleCode/assets
+          /home/runner/work/RestSampleCode/RestSampleCode/report.html
