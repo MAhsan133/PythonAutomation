@@ -36,9 +36,9 @@ jobs:
         pytest --html=report.html
     - name: Create artifact folder
       run: |
-        mkdir -p RestSampleCode/RestSampleCode
+        mkdir -p ~/RestSampleCode/RestSampleCode
     - name: 'Upload artifact #1'
       uses: actions/upload-artifact@v2
       with:
         name: 'Artifact-A'
-        path: RestSampleCode/RestSampleCode/report.html 
+        path: ~/RestSampleCode/RestSampleCode/report.html 
