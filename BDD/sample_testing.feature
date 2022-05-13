@@ -1,4 +1,4 @@
-Feature: Guess the word
+Feature: Sample file
   Background:
     Given I am logged in with name '1234' and password '1234'
 
