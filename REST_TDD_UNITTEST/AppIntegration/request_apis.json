@@ -1,0 +1,5 @@
+{
+    "fetch_all_users": "{}/gateway/api/adminhub/um/org/{}/users?count=20&start-index=1&status=active",
+    "create_user": "{}/gateway/api/adminhub/um/org/{}/users/invite",
+    "delete_user": "{}/gateway/api/adminhub/um/org/{}/users/{}/deactivate"
+}
