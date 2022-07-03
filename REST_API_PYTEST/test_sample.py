@@ -1,22 +1,21 @@
-import unittest
 import os
 import requests
 import json
 
 
-class TestRest(unittest.TestCase):
+class TestRestAPI:
     VALID_USER = False
     BASE_URL = "https://reqres.in/"
 
     # Get username and password from command line
     # here we can verify user from DB
-
-    def setUp(self):
+    @classmethod
+    def setup_class(cls):
         try:
             env_user_name = os.environ['USER_NAME']
             env_pass_word = os.environ['PASS_WORD']
             if env_user_name == '1234' and env_pass_word == '1234':
-                self.VALID_USER = True
+                cls.VALID_USER = True
         except:
             pass
 
